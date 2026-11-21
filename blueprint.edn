@@ -1,0 +1,16 @@
+{:itonami.blueprint/id "cloud-itonami-isic-6202"
+ :itonami.blueprint/name "Governed CRM-Integrated Customer-Service Hub Actor"
+ :itonami.blueprint/isic-rev5 "6202"
+ :itonami.blueprint/domain :software/customer-service-hub
+ :itonami.blueprint/license "AGPL-3.0"
+ :itonami.blueprint/social-impact [:sla-entitlement-fairness :case-lifecycle-integrity :disclosure-minimization]
+ :itonami.blueprint/governor :service-governor
+ :itonami.blueprint/robotics false
+ :itonami.blueprint/required-technologies [:identity :audit-ledger]
+ :itonami.blueprint/status :public-oss
+ :itonami.blueprint/implemented-slice
+ "SupportOps-LLM sealed advisor wrapped by an independent ServiceGovernor
+ (src/svcdesk/policy.cljk: sla-tier-gate, case-status-sequence-gate,
+ double-close-gate, source-provenance-gate), a langgraph StateGraph and
+ an append-only audit ledger, on kotoba-lang/crm's technical commons
+ shared with cloud-itonami-isic-5820."}
